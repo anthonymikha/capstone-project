@@ -23,7 +23,7 @@ pipeline {
 
     stage('test') {
       steps {
-        sh 'curl aws-machine-IP:80 '
+        sh 'curl 3.230.0.72:80 '
       }
     }
 
@@ -35,7 +35,7 @@ pipeline {
 
     stage('Push') {
       steps {
-        sh 'docker push anthonymikha/capstone-project'
+        sh 'docker push miikha/capstone-project'
       }
     }
     // stage('logout') {
