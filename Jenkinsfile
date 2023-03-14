@@ -11,7 +11,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh 'sudo docker build -t anthonymikha/capstone-project .'
+        sh 'docker build -t anthonymikha/capstone-project .'
       }
     }
 
