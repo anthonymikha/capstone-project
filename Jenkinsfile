@@ -11,13 +11,13 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh 'docker build -t anthonymikha/capstone-project .'
+        sh 'sudo docker build -t anthonymikha/capstone-project .'
       }
     }
 
     stage('run') {
       steps {
-        sh 'docker run --name app -p 80:80 -d anthonymikha/capstone-project'
+        sh 'sudo docker run --name app -p 80:80 -d anthonymikha/capstone-project'
       }
     }
 
@@ -35,14 +35,14 @@ pipeline {
 
     stage('Push') {
       steps {
-        sh 'docker push anthonymikha/capstone-project'
+        sh 'sudo docker push anthonymikha/capstone-project'
       }
     }
     // stage('logout') {
     //  steps {
-    //   sh 'docker logout'
-    //	 sh 'docker stop app'
-    //	 sh 'docker rm app'
+    //   sh 'sudo docker logout'
+    //	 sh 'sudo docker stop app'
+    //	 sh 'sudo docker rm app'
     // }
     //}
   }
