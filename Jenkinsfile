@@ -11,7 +11,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh 'sudo docker build -t miikha/capstone-project . -S'
+        sh 'sudo - S docker build -t miikha/capstone-project .'
       }
     }
 
