@@ -11,13 +11,13 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh 'sudo -S ubuntu123 docker build -t anthonymikha/capstone-project .'
+        sh 'echo ubuntu123 | sudo docker build -t anthonymikha/capstone-project .'
       }
     }
 
     stage('run') {
       steps {
-        sh 'echo ubuntu123 | sudo docker run --name app -p 80:80 -d miikha/capstone-project'
+        sh 'sudo docker run --name app -p 80:80 -d miikha/capstone-project'
       }
     }
 
