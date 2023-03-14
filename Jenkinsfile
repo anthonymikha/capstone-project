@@ -17,7 +17,7 @@ pipeline {
 
     stage('run') {
       steps {
-        sh 'sudo -S ubuntu123 docker run --name app -p 80:80 -d miikha/capstone-project'
+        sh 'echo ubuntu123 | sudo docker run --name app -p 80:80 -d miikha/capstone-project'
       }
     }
 
