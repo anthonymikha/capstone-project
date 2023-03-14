@@ -11,13 +11,13 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh 'docker build -t anthonymikha/capstone-project .'
+        sh 'sudo -S ubuntu123 docker build -t anthonymikha/capstone-project .'
       }
     }
 
     stage('run') {
       steps {
-        sh 'docker run --name app -p 80:80 -d miikha/capstone-project'
+        sh 'sudo -S ubuntu123 docker run --name app -p 80:80 -d miikha/capstone-project'
       }
     }
 
@@ -35,14 +35,14 @@ pipeline {
 
     stage('Push') {
       steps {
-        sh 'docker push miikha/capstone-project'
+        sh 'sudo -S ubuntu123 docker push miikha/capstone-project'
       }
     }
     // stage('logout') {
     //  steps {
-    //   sh 'docker logout'
-    //	 sh 'docker stop app'
-    //	 sh 'docker rm app'
+    //   sh 'sudo -S ubuntu123 docker logout'
+    //	 sh 'sudo -S ubuntu123 docker stop app'
+    //	 sh 'sudo -S ubuntu123 docker rm app'
     // }
     //}
   }
