@@ -11,7 +11,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh 'echo ubuntu123 | sudo docker build -t anthonymikha/capstone-project .'
+        sh 'echo ubuntu123 | sudo -S docker build -t anthonymikha/capstone-project .'
       }
     }
 
