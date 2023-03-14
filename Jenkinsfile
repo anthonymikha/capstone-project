@@ -11,13 +11,13 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh 'docker build -t miikha/capstone-project .'
+        sh 'docker build -t anthonymikha/capstone-project .'
       }
     }
 
     stage('run') {
       steps {
-        sh 'docker run --name app -p 80:80 -d miikha/capstone-project'
+        sh 'docker run --name app -p 80:80 -d anthonymikha/capstone-project'
       }
     }
 
@@ -35,7 +35,7 @@ pipeline {
 
     stage('Push') {
       steps {
-        sh 'docker push miikha/capstone-project'
+        sh 'docker push anthonymikha/capstone-project'
       }
     }
     // stage('logout') {
